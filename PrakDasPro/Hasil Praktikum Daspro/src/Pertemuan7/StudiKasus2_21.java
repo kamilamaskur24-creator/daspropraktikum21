@@ -43,6 +43,17 @@ public class StudiKasus2_21 {
         } else if (JenisKegiatan.equalsIgnoreCase("PKM")) {
         System.out.println("Status pendanaan PKM (1= Lolos / 0= Tidak Lolos): ");
         statusPKM = nuha.nextInt();
+         //if disini biar status PKM nya keinput,semoga ga bingung lagi aku
+            if (statusPKM == 1) {
+                System.out.println("Status : Dokumen lengkap.");
+                System.out.println("Dana penghargaan diberikan.");
+            } else {
+                System.out.println("Status : Dokumen lengkap, tetapi tidak lolos PKM.");
+                System.out.println("Dana penghargaan tidak diberikan.");
+            }
+        } else {
+            System.out.println("Jenis kegiatan tidak valid.");
+            System.out.println("Dana penghargaan tidak diberikan.");
 
        
         

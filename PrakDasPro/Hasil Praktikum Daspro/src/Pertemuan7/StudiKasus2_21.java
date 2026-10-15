@@ -43,6 +43,7 @@ public class StudiKasus2_21 {
         } else if (JenisKegiatan.equalsIgnoreCase("PKM")) {
         System.out.println("Status pendanaan PKM (1= Lolos / 0= Tidak Lolos): ");
         statusPKM = nuha.nextInt();
+        
          //if disini biar status PKM nya keinput,semoga ga bingung lagi aku
             if (statusPKM == 1) {
                 System.out.println("Status : Dokumen lengkap.");

@@ -19,7 +19,7 @@ public class Triangle21 {
                 j++;
             }
 
-            System.out.println();
+           
             i++;
         }
         

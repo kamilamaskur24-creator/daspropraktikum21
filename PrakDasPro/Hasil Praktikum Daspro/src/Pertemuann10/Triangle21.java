@@ -10,10 +10,10 @@ public class Triangle21 {
         System.out.print("Masukkan nilai n = ");
         int n = nuha.nextInt();
 
-        int i = 0;
+        int i = 1;
         while (i <= n) {
-            
-           int j = 0 ;
+
+           int j = 1 ;
            while (j < i ) {
             System.out.print("*");
                 j++;
@@ -24,6 +24,20 @@ public class Triangle21 {
         }
         
         nuha.close();
+
+        
+        i = 1;
+        while (i <= n) {
+        
+           int j = 5 ;
+           while (j  >= i ) {
+            System.out.print("*");
+                j--;
+            }
+
+           System.out.println();
+            i++;
+        }
 
 
     }

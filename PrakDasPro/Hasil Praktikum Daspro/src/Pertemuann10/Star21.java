@@ -9,19 +9,16 @@ public class Star21 {
         // n (uji ke-2) 9 + (P mod 5) => 9 + (21 mod 5) = 10
         //(Pertanyaan 1 & 2) n 4 + (P mod 4) => 4 + (21 mod 4) = 5
         //(Pertanyaan 3) n 10 + (P mod 6) =>  10 + (21 mod 6)= 13 
+        
         System.out.print("Masukkan nilai n = ");
         int n =nuha.nextInt();
-        for (int i = 2 ; i < n; i+=2) {  
-            System.out.print(i + " ");
-            }
+
+        for (int i = 1 ; i <= n; i++) {  
+            System.out.print("*");
+    
+        }
         System.out.println();
         nuha.close();
-
-
-
-
-
-
 
     }
     

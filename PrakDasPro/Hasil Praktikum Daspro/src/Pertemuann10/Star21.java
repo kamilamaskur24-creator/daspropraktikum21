@@ -13,8 +13,8 @@ public class Star21 {
         System.out.print("Masukkan nilai n = ");
         int n =nuha.nextInt();
 
-        for (int i = 0 ; i < n; i++) {  
-            System.out.print("*");
+        for (int i = 2 ; i <= n; i += 2) {  
+            System.out.print(i  + " ");
     
         }
         System.out.println();

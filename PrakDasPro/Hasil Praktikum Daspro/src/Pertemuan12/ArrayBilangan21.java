@@ -8,8 +8,9 @@ public class ArrayBilangan21 {
 
     //ditampilkan
     for (int i = 0; i < bil.length; i++) {
-        System.out.println("bil[" + i + " ] = " + bil[i]);
-    }
+        System.out.println("bil[" + i+ "] = " + bil[i] + ", double = " + (bil[i] * 2));
+    } 
+    //foreach loop
     for (int nilai : bil) {
         System.out.println(nilai);
     }

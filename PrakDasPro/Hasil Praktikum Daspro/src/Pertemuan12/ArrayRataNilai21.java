@@ -5,9 +5,14 @@ import java.util.Scanner;
 public class ArrayRataNilai21 {
     public static void main(String[] args) {
         Scanner nuha = new Scanner(System.in);
-        int[] nilaiMhs = new int[10];
         int total = 0;
         double rata2;
+        int nilaiMhs1;
+        
+        System.out.println( " Masukkan banyak mahasiswa ");
+        nilaiMhs1 = nuha.nextInt();
+
+        int[] nilaiMhs = new int[nilaiMhs1];
 
         for (int i = 0; i < nilaiMhs.length; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");

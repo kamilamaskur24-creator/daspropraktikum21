@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class BioskopWithScanner21 {
     public static void main(String[] args) {
         Scanner nuha = new Scanner(System.in);
+        
+        // Pada menu 1, tampilkan peringatan jika kursi yang dipilih sudah terisi penonton lain, lalu minta baris dan kolom kembali. 
+        // Pada menu 2, jika sebuah kursi kosong (null), tampilkan *** sebagai pengganti null.
 
         int baris, kolom;
         String nama, pilihan;
@@ -26,14 +29,24 @@ public class BioskopWithScanner21 {
             while (true) {
                 System.out.println("Masukkan baris , pilih salah satu 1 - 2 - 3 - 4 : ");
                     baris = nuha.nextInt();
+                    
+                    if (baris < 1 || baris >4) {
+                        System.out.println("Baris Salah input ulang");
+                        continue;
+                    }
                     System.out.println("Masukkan kolom , pilih salah satu 1 - 2 : ");
-                    kolom = nuha.nextInt();
+                    kolom = nuha.nextInt(); 
+                    nuha.nextLine();   
+                    
+                    if (kolom <1 || kolom >2) {
+                        System.out.println("kolom salah , ulangi input");
+                        continue;
+                    }
                     penonton[baris - 1][kolom - 1] = nama;
-                    nuha.nextLine();
-
-                    break;
-            }
-            
+                    break;    
+                
+                }
+        
         }else if (pilihan.equals("2")) {
             System.out.println(" Daftar Penonton");
             for (int i = 0; i < penonton.length; i++) {
@@ -50,10 +63,10 @@ public class BioskopWithScanner21 {
         } else {
             System.out.println(" Input salah , input pilihan dari salah satu menu ");
         }
-
-            }
+    }
         nuha.close();
+    }
         }
 
-    }
+    
     

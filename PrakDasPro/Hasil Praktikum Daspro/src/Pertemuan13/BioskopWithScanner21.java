@@ -5,9 +5,6 @@ import java.util.Scanner;
 public class BioskopWithScanner21 {
     public static void main(String[] args) {
         Scanner nuha = new Scanner(System.in);
-        
-        
-        // Pada menu 2, jika sebuah kursi kosong (null), tampilkan *** sebagai pengganti null.
 
         int baris, kolom;
         String nama, pilihan;
@@ -26,7 +23,7 @@ public class BioskopWithScanner21 {
         if (pilihan.equals("1")) {
             System.out.println(" Masukkan nama anda : ");
             nama = nuha.nextLine();
-        //Pada menu 1, tampilkan peringatan jika kursi yang dipilih sudah terisi penonton lain, lalu minta baris dan kolom kembali. 
+        //input jika baris salah
             while (true) {
                 System.out.println("Masukkan baris , pilih salah satu 1 - 2 - 3 - 4 : ");
                     baris = nuha.nextInt();
@@ -38,10 +35,12 @@ public class BioskopWithScanner21 {
                     System.out.println("Masukkan kolom , pilih salah satu 1 - 2 : ");
                     kolom = nuha.nextInt(); 
                     nuha.nextLine();   
-                    
+        //input jika kolom salah
                     if (kolom <1 || kolom >2) {
                         System.out.println("kolom salah , ulangi input");
                         continue;
+
+        //Pada menu 1, tampilkan peringatan jika kursi yang dipilih sudah terisi penonton lain, lalu minta baris dan kolom kembali.     
                     }else if(penonton[baris-1][kolom-1]!= null){
                         System.out.println("maaf kursi sudah terisi , pilih yang lain");
                     }
@@ -49,13 +48,18 @@ public class BioskopWithScanner21 {
                     break;    
                 
                 }
-        
+
+        // Pada menu 2, jika sebuah kursi kosong (null), tampilkan *** sebagai pengganti null.
         }else if (pilihan.equals("2")) {
             System.out.println(" Daftar Penonton");
             for (int i = 0; i < penonton.length; i++) {
                 for (int j = 0; j < penonton[i].length; j++) {
+                    if (penonton[i][j] == null) {
+                        System.out.print("***\t");
+                    } else {
                     System.out.print(penonton[i][j] + "\t" ) ;
                 }
+            }
                 System.out.println();
             }
 
@@ -69,7 +73,9 @@ public class BioskopWithScanner21 {
     }
         nuha.close();
     }
-        }
+        
+    }
+
 
     
     

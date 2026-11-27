@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class SIAKAD21 {
     public static void main(String[] args) {
         Scanner nuha = new Scanner(System.in);
+
         int [] [] nilai = new int [4] [3];
 
         for (int i = 0; i < nilai.length; i++) { 
@@ -16,23 +17,21 @@ public class SIAKAD21 {
                 nilai[i][j] = nuha.nextInt(); 
                 totalPerSiswa += nilai[i][j];
             }
+        
             System.out.println("Nilai rata-rata: " + totalPerSiswa / nilai[i].length);
         }
+            System.out.println("\n==========================");
+            System.out.println("Rata Rata nilai setiap mata kuliah: ");
 
+            for (int j = 0; j < nilai[0].length; j++) {
+                double totalPerMatkul =  0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+            for (int i = 0; i < nilai.length; i++) {
+                totalPerMatkul += nilai[i][j];
+                }
+                System.out.println("Mata kuliah " + (j + 1) + " : " + totalPerMatkul/nilai.length);
+            }
+    }
     }
     
-}
+
